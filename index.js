@@ -10,7 +10,7 @@ const esbuild = require('esbuild-wasm')
 try {
   const time = (new Date()).toTimeString()
 //   const config = yaml.parse('_config.yaml')
-  const payload = JSON.stringify({ github }, null, 2)
+  const payload = JSON.stringify(github.context , null, 2)
 //   fs.writeFileSync('api.json', payload)
 
   // const ts = fs.readFileSync('worker.js')
