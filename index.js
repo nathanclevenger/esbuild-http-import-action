@@ -20,7 +20,7 @@ const run = async () => {
 
     
 
-  const result = swc.transform("source code", {
+  const result = await swc.transform("source code", {
       // Some options cannot be specified in .swcrc
       filename: "worker.js",
       sourceMaps: true,
