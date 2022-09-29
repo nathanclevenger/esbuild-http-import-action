@@ -1,7 +1,11 @@
-import fs from 'fs'
-import core from '@actions/core'
-import github from '@actions/github'
-import esbuild from 'esbuild-wasm'
+// import fs from 'fs'
+// import core from '@actions/core'
+// import github from '@actions/github'
+// import esbuild from 'esbuild-wasm'
+const fs = require('fs')
+const core = require('@actions/core')
+const github = require('@actions/github')
+const esbuild = require('esbuild-wasm')
 
 try {
   const time = (new Date()).toTimeString()
