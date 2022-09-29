@@ -7,7 +7,7 @@ inputs:
   entryPoint:  
     description: 'The main entry point'
     required: false
-    default: './worker.js'
+    default: './index.js'
   bundle:  
     description: 'Whether ESBuild should bundle or not'
     required: false
