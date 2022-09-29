@@ -11827,21 +11827,24 @@ const core = __nccwpck_require__(2186)
 const github = __nccwpck_require__(5438)
 const esbuild = __nccwpck_require__(6594)
 
-(async () => {
-try {
-  const time = (new Date()).toTimeString()
-//   const config = yaml.parse('_config.yaml')
-  const payload = JSON.stringify(github.context , null, 2)
-//   fs.writeFileSync('api.json', payload)
+const run = async () => {
+  try {
+    const time = (new Date()).toTimeString()
+  //   const config = yaml.parse('_config.yaml')
+    const payload = JSON.stringify(github.context , null, 2)
+  //   fs.writeFileSync('api.json', payload)
 
-  // const ts = fs.readFileSync('worker.js')
-  const ts = 'let test: boolean = true'
-  const result = await esbuild.transform(ts, { loader: 'ts' })
-  console.log('result:', result)
-  console.log(`The generated api.json: ${payload}`)
-} catch (error) {
-  core.setFailed(error.stack)
-}})()
+    // const ts = fs.readFileSync('worker.js')
+    const ts = 'let test: boolean = true'
+    const result = await esbuild.transform(ts, { loader: 'ts' })
+    console.log('result:', result)
+    console.log(`The generated api.json: ${payload}`)
+  } catch (error) {
+    core.setFailed(error.stack)
+  }
+}
+
+run()
 })();
 
 module.exports = __webpack_exports__;
