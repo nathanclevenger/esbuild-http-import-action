@@ -12,6 +12,10 @@ inputs:
     description: 'Whether ESBuild should bundle or not'
     required: false
     default: true
+  outfile: 
+    description: 'The name of the output file'
+    required: false
+    default: './dist/index.js'
 outputs:
   outfile: 
     description: 'The name of the output file'
