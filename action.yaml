@@ -3,6 +3,18 @@ description: 'GitHub Action for ESBuild with support for HTTP Imports'
 branding:
   icon: 'box'  
   color: 'black'
+inputs:
+  entryPoint:  
+    description: 'The main entry point'
+    required: false
+    default: './worker.js'
+  bundle:  
+    description: 'Whether ESBuild should bundle or not'
+    required: false
+    default: true
+outputs:
+  outfile: 
+    description: 'The name of the output file'
 runs:
   using: 'node16'
   main: './index.js'
