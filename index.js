@@ -8,7 +8,7 @@ try {
   const time = (new Date()).toTimeString()
 
   const payload = JSON.stringify(github.context , null, 2)
-  esbuild.build({
+  await esbuild.build({
     entryPoints: [core.getInput('entryPoint')],
     bundle: true, //core.getInput('bundle'),
     outfile: core.getInput('outfile'),
