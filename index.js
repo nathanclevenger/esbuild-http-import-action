@@ -10,7 +10,7 @@ try {
   const payload = JSON.stringify(github.context , null, 2)
   await esbuild.build({
     entryPoints: [core.getInput('entryPoint')],
-    bundle: true, //core.getInput('bundle'),
+    bundle: true, 
     outfile: core.getInput('outfile'),
     plugins: [httpPlugin],
   }).catch(() => process.exit(1))
