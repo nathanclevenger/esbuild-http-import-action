@@ -7,6 +7,7 @@ const core = require('@actions/core')
 const github = require('@actions/github')
 const esbuild = require('esbuild-wasm')
 
+(async () => {
 try {
   const time = (new Date()).toTimeString()
 //   const config = yaml.parse('_config.yaml')
@@ -20,4 +21,4 @@ try {
   console.log(`The generated api.json: ${payload}`)
 } catch (error) {
   core.setFailed(error.stack)
-}
+}})()
