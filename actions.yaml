@@ -1,0 +1,8 @@
+name: 'api.json'
+description: 'Generate api.json file'
+branding:
+  icon: 'box'  
+  color: 'black'
+runs:
+  using: 'node16'
+  main: './dist/index.js'
