@@ -15,7 +15,7 @@ try {
     plugins: [httpPlugin],
   }).catch(() => process.exit(1))
 
-  const output = fs.readFileSync(core.getInput('bundle'))
+  const output = fs.readFileSync(core.getInput('outfile'))
   core.setOutput("bundle", output)
   
   console.log(`The ESBuild output: ${output}`)
