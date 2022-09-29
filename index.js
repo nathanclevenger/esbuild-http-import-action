@@ -19,5 +19,5 @@ try {
   console.log('result:', result)
   console.log(`The generated api.json: ${payload}`)
 } catch (error) {
-  core.setFailed(error.message)
+  core.setFailed(error.stack)
 }
