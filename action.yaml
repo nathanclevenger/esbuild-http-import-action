@@ -17,8 +17,8 @@ inputs:
     required: false
     default: './dist/index.js'
 outputs:
-  outfile: 
-    description: 'The name of the output file'
+  bundle: 
+    description: 'the output file'
 runs:
   using: 'node16'
   main: './index.js'
