@@ -1,5 +1,5 @@
-name: 'api.json'
-description: 'Generate api.json file'
+name: 'esbuild-http-import'
+description: 'GitHub Action for ESBuild with support for HTTP Imports'
 branding:
   icon: 'box'  
   color: 'black'
