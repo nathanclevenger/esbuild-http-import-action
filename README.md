@@ -5,6 +5,7 @@ GitHub Action for ESBuild with support for HTTP Imports
 
 ```yaml
     steps:
+      - uses: actions/checkout@v3
       - uses: nathanclevenger/esbuild-http-import-action@v1
         with:
           entryPoint: "./index.js"
